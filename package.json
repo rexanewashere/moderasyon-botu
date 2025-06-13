@@ -1,0 +1,33 @@
+{
+  "name": "wrx-moderasyon",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "package": "pkg .",
+    "make-exe": "npm run build && npm run package"
+  },
+  "bin": "dist/index.js",
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "executable"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.5.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "pkg": "^5.8.1",
+    "typescript": "^5.8.3"
+  }
+}
